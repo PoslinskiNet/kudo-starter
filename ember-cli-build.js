@@ -22,5 +22,8 @@ module.exports = function(defaults) {
     production: 'node_modules/react-dom/umd/react-dom.production.min.js'
   });
 
+  app.import('vendor/shims/react.js');
+  app.import('vendor/shims/react-dom.js');
+
   return app.toTree();
 };
