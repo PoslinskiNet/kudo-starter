@@ -2,9 +2,14 @@ module.exports = {
   root: true,
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   plugins: [
+    'babel',
+    'react',
     'ember'
   ],
   extends: [
@@ -15,6 +20,8 @@ module.exports = {
     browser: true
   },
   rules: {
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error'
   },
   overrides: [
     // node files
