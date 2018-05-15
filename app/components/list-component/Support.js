@@ -67,7 +67,7 @@ export default class Support extends React.PureComponent {
                 </button>
               </span>
             </div>
-            <div className="row margin-top-m">
+            <div className="row margin-top-m flex-space-between">
               <button onClick={this.sendKudos} className="btn button">
                 Accept
               </button>
