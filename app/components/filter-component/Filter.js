@@ -7,14 +7,14 @@ export default class Filter extends React.PureComponent {
 
   render() {
     return (
-      <div style={{ display: 'flex', flexDirection: 'row' }}>
-        <button onClick={this.changeFilter} name="1">
+      <div className="filters flex-centered">
+        <button className="btn btn-default" onClick={this.changeFilter} name="1">
           My ideas
         </button>
-        <button onClick={this.changeFilter} name="2">
+        <button className="btn btn-default" onClick={this.changeFilter} name="2">
           Supported
         </button>
-        <button onClick={this.changeFilter} name="3">
+        <button className="btn btn-default" onClick={this.changeFilter} name="3">
           I chuj
         </button>
       </div>

@@ -7,7 +7,17 @@
     flex-direction: column
 }
 
-.flex-centered {
+.flex-align-center {
     @include flex();
     align-items: center;
+}
+
+.flex-centered {
+    @include flex();
+    justify-content: center;
+}
+
+.flex-space-between {
+    @include flex();
+    justify-content: space-between;
 }
