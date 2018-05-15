@@ -2,6 +2,8 @@ import React from 'react'
 
 export default class AddIdea extends React.Component {
   state = {}
+
+  handleAreaChange = ({ target: { innerText } }) => this.setState({ description: innerText })
   handleChange = ({ target: { name, value } }) => this.setState({ [name]: value })
   addIdea = event => {
     event.preventDefault()
@@ -18,7 +20,7 @@ export default class AddIdea extends React.Component {
           type="text"
           onChange={this.handleChange}
         />
-        <textarea name="description" placeholder="Description" onChange={this.handleChange} />
+        <div contentEditable={true} placeholder="Description" onInput={this.handleAreaChange} />
         <input name="image" placeholder="Image url" type="text" onChange={this.handleChange} />
         <input name="target" placeholder="Kudo cap " type="number" onChange={this.handleChange} />
         <button type="submit">Add</button>
