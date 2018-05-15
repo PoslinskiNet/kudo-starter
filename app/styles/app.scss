@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
 
 @import "ember-bootstrap/bootstrap";
+@import "variables";
 @import "helpers";
+@import "buttons";
 @import "idea";
 @import "profile";
 @import "filters";

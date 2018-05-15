@@ -13,6 +13,10 @@ export default class Idea extends React.PureComponent {
     return (
       <div className="col-md-4">
         <div className="idea">
+          <div className="idea__giver">
+            <img src={inventor.avatarUrl} alt="idea" />
+          </div>
+        
           <div className="idea__cover">
             <img src={image} alt="idea" />
           </div>
@@ -31,9 +35,6 @@ export default class Idea extends React.PureComponent {
             </div>
             <h1 className="idea__title">{title}</h1>
             <h2 className="idea__text">{shortDescription}</h2>
-            <h3 className="idea__giver">
-              <img src={inventor.avatarUrl} alt="idea" />
-            </h3>
 
             <div className="idea__actions">
               <Support giveKudos={this.giveKudos} />

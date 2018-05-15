@@ -23,7 +23,7 @@ export default class Support extends React.PureComponent {
     return (
       <div>
         {showButton ? (
-          <button onClick={this.toggleSupport} className="btn btn-success">
+          <button onClick={this.toggleSupport} className="btn button">
             $upport
           </button>
         ) : (
@@ -45,10 +45,10 @@ export default class Support extends React.PureComponent {
                 $
               </button>
             </span>
-            <button onClick={this.sendKudos} className="btn btn-success">
+            <button onClick={this.sendKudos} className="btn button">
               Accept
             </button>
-            <button onClick={this.toggleSupport} className="btn btn-success">
+            <button onClick={this.toggleSupport} className="btn button">
               Decline
             </button>
           </div>
