@@ -4,6 +4,17 @@
   border-radius: 20px;
   border: 2px solid;
   color: $primary-color;
+  
+  &--primary {
+      color: $secondary-color;
+  }
+
+  &--muted {
+      color: $dark-color;
+  }
+}
+
+*:focus {
   outline: none !important;
 }
 

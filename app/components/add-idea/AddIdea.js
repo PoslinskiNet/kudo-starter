@@ -12,7 +12,7 @@ export default class AddIdea extends React.Component {
 
   render() {
     return (
-      <div className="center-block" style={{ width: 500 }}>
+      <div className="center-block" style={{width: 500, padding: '30px 0'}}>
         <form onSubmit={this.addIdea}>
           <div className="form-group">
             <label>Title</label>
@@ -50,9 +50,11 @@ export default class AddIdea extends React.Component {
               onChange={this.handleChange}
             />
           </div>
-          <button type="submit" className="btn button btn-block btn-lg">
-            Add
-          </button>
+
+          <div class="flex-space-between">
+            <a href="/ideas" className="btn button button--muted btn-lg">Cancel</a>
+            <button type="submit" className="btn button btn-lg btn-block" style={{marginLeft: 20}}>Add</button>
+          </div>
         </form>
       </div>
     )
