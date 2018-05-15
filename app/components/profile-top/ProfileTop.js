@@ -13,9 +13,9 @@ export default class ProfileTop extends React.Component {
     const { user } = this.state;
 
     return (
-      <div>
-        <div>{user.name}</div>
-        <img src={user.avatar} />
+      <div className="profile flex-column flex-centered">
+        <div className="avatar"><img className="avatar__image" src={user.avatar} /></div>
+        <div className="profile__name">{user.name}</div>
         <div>{this.state.kudosGiven}/20</div>
       </div>
     )

@@ -1,0 +1,20 @@
+.profile {
+    &__name {
+        font-size: 20px;
+        line-height: 1.5em;
+    }
+}
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid blue;
+    background: #fefefe;
+    padding: 10px;
+
+    &__image {
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid orange;
+    }
+}
