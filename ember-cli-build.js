@@ -7,6 +7,7 @@ module.exports = function(defaults) {
     sassOptions: {
       extension: 'scss'
     },
+
     babel: {
       presets: ['stage-0'],
       plugins: [
@@ -15,6 +16,12 @@ module.exports = function(defaults) {
         'transform-object-rest-spread',
       ],
     },
+
+    'ember-bootstrap': {
+      'bootstrapVersion': 3,
+      'importBootstrapFont': true,
+      'importBootstrapCSS': false
+    }
   })
 
   app.import({
