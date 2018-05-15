@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('login');
   this.route('ideas', function() {
     this.route('idea', { path: 'idea/:idea_id' });
+    this.route('new');
   });
 });
 

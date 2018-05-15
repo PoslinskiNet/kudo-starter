@@ -2,7 +2,7 @@ import React from 'react'
 import Support from './Support'
 
 export default class Idea extends React.PureComponent {
-  giveKudos = (amount) => {
+  giveKudos = (amount = 1) => {
     const { id, giveKudos } = this.props;
     giveKudos(id, amount);
   }

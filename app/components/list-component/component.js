@@ -31,7 +31,7 @@ export default ReactComponent.extend({
       const user = this.get('session.currentUser')
       const idea = store.peekRecord('idea', id)
 
-      return store.createRecord('donate', {
+      return this.get('store').createRecord('donation', {
         user,
         idea,
         amount,

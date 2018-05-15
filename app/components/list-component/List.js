@@ -7,7 +7,9 @@ export default class List extends React.Component {
 
     return (
       <div className="container ideas-list">
-        <div className="row">{ideas.map(idea => <Idea key={idea.id} {...idea} giveKudos={this.props.giveKudos} />)}</div>
+        <div className="row">
+          {ideas.map(idea => <Idea key={idea.id} {...idea} giveKudos={this.props.giveKudos} />)}
+        </div>
       </div>
     )
   }
