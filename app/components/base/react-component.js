@@ -13,7 +13,7 @@ export default Component.extend({
    * @param {React.Component} reactComponent. e.g., <HelloWorld />
    */
   reactRender(reactComponent) {
-    ReactDOM.render(reactComponent, this.element);
+    return ReactDOM.render(reactComponent, this.element);
   },
 
   /**

@@ -13,8 +13,8 @@ export default ReactComponent.extend({
   didReceiveAttrs() {
     this._super(...arguments)
 
-    if (this.element) {
-      this.renderList()
+    if (this.get('component')) {
+      this.get('component').forceUpdate();
     }
   },
 
@@ -30,10 +30,14 @@ export default ReactComponent.extend({
       inventor: idea.get('inventor'),
     }))
 
-    return this.reactRender(
+    const component = this.reactRender(
       <List ideas={data} giveKudos={this.actions.giveKudos.bind(this)} />,
       this.element,
     )
+
+    this.set('component', component);
+
+    return component;
   },
 
   actions: {
