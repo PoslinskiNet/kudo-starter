@@ -1,3 +1,7 @@
+# Hackaton presentation
+
+https://slides.com/agnieszkapawlicka/kudo-starter
+
 # kudo-starter
 
 This README outlines the details of collaborating on this Ember application.
