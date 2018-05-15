@@ -4,7 +4,8 @@ module.exports = {
     ecmaVersion: 2017,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
+      experimentalObjectRestSpread: true
     }
   },
   plugins: [

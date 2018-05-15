@@ -7,7 +7,8 @@ module.exports = function(defaults) {
     babel: {
       plugins: [
         'transform-class-properties',
-        'transform-react-jsx'
+        'transform-react-jsx',
+        'transform-object-rest-spread'
       ]
     }
   });
