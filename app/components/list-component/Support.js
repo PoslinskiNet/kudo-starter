@@ -13,11 +13,11 @@ export default class Support extends React.PureComponent {
       <div>
         {showButton ? (
           <button onClick={this.changeState} className="btn btn-success">
-            Support
+            $upport
           </button>
         ) : (
           <div>
-            <span>X X X X X</span>
+            <span>$ $ $ $ $</span>
             <button onClick={this.changeState} className="btn btn-success">
               Accept
             </button>
