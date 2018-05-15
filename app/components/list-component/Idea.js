@@ -7,19 +7,27 @@ export default class Idea extends React.PureComponent {
     giveKudos(id, amount)
   }
 
+  isValidURL = str => {
+    const a = document.createElement('a')
+    a.href = str
+    return a.host && a.host != window.location.host
+  }
+
   render() {
     const { title, shortDescription, image, target, inventor } = this.props
-    const ideaImage =
-      image ||
-      'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg'
+    const inventorImage =
+      inventor.avatarUrl || 'https://www.fancyhands.com/images/default-avatar-250x250.png'
+    const ideaImage = this.isValidURL(image)
+      ? image
+      : 'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg'
 
     return (
       <div className="col-md-4">
         <div className="idea">
           <div className="idea__giver">
-            <img src={inventor.avatarUrl} alt="idea" />
+            <img src={inventorImage} alt="inventor" />
           </div>
-          <div className="idea__cover" style={{backgroundImage: `url(${ideaImage})`}} />
+          <div className="idea__cover" style={{ backgroundImage: `url(${ideaImage})` }} />
           <div className="idea__progress flex-centered">
             <div className="progress-circle">
               <div className="progress-circle-inner">
