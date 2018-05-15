@@ -1,0 +1,24 @@
+{{outlet}}
+
+{{#link-to 'ideas.new' class="JAREK btn btn-default"}}+{{/link-to}}
+
+{{filter-component}}
+
+{{list-component ideas=model}}
+
+{{#loaders/ideas-loader as |loader|}}
+  {{#if loader.isRunning}}
+    <div class="container ideas-list">
+      {{#each (range 1 10) as |n|}}
+        <div class="col-md-4 placeholder-idea">
+          {{#content-placeholders rounded=true as |placeholder|}}
+            {{placeholder.img}}
+            {{placeholder.heading}}
+          {{/content-placeholders}}
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    {{list-component ideas=loader.data}}
+  {{/if}}
+{{/loaders/ideas-loader}}
