@@ -1,13 +1,13 @@
-.button {
+.button,
+.button:active,
+.button:hover {
   border-radius: 20px;
   border: 2px solid;
   color: $primary-color;
-}
-
-*:focus {
   outline: none !important;
 }
 
+.button:focus,
 .active {
   color: $secondary-color;
 }
