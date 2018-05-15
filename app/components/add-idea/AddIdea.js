@@ -12,14 +12,14 @@ export default class AddIdea extends React.Component {
 
   render() {
     return (
-      <div className="center-block" style={{width: 500}}>
+      <div className="center-block" style={{ width: 500 }}>
         <form onSubmit={this.addIdea}>
           <div className="form-group">
-            <label for="">Title</label>
+            <label>Title</label>
             <input name="title" className="form-control" type="text" onChange={this.handleChange} />
           </div>
           <div className="form-group">
-            <label for="" className="control-label">Short description</label>
+            <label className="control-label">Short description</label>
             <input
               name="shortDescription"
               className="form-control"
@@ -28,19 +28,31 @@ export default class AddIdea extends React.Component {
             />
           </div>
           <div className="form-group">
-            <label for="" className="control-label">Description</label>
-            <div contentEditable={true} className="form-control" style={{height: 100}}onInput={this.handleAreaChange} />
+            <label className="control-label">Description</label>
+            <div
+              contentEditable={true}
+              className="form-control"
+              style={{ height: 100 }}
+              onInput={this.handleAreaChange}
+            />
           </div>
-          
+
           <div className="form-group">
-            <label for="" className="control-label">Image url</label>
+            <label className="control-label">Image url</label>
             <input name="image" className="form-control" type="text" onChange={this.handleChange} />
           </div>
           <div className="form-group">
-            <label for="" className="control-label">Kudo cap</label>
-            <input name="target" className="form-control"  type="number" onChange={this.handleChange} />
+            <label className="control-label">Kudo cap</label>
+            <input
+              name="target"
+              className="form-control"
+              type="number"
+              onChange={this.handleChange}
+            />
           </div>
-          <button type="submit" className="btn button btn-block btn-lg">Add</button>
+          <button type="submit" className="btn button btn-block btn-lg">
+            Add
+          </button>
         </form>
       </div>
     )
