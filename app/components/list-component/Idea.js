@@ -1,4 +1,5 @@
 import React from 'react'
+import Support from './Support'
 
 export default class Idea extends React.PureComponent {
   render() {
@@ -16,8 +17,7 @@ export default class Idea extends React.PureComponent {
             <h3 className="idea__giver">Idea giver</h3>
 
             <div className="idea__actions btn-group ">
-              <button className="btn btn-success">Bump +1</button>
-              <button className="btn btn-success">Bump +5</button>
+              <Support />
             </div>
           </div>
         </div>

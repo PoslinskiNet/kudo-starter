@@ -3,9 +3,11 @@ import Idea from './Idea'
 
 export default class List extends React.Component {
   render() {
+    const { ideas } = this.props
+
     return (
       <div className="container ideas-list">
-        <div className="row">{this.props.ideas.map(idea => <Idea key={idea.id} {...idea} />)}</div>
+        <div className="row">{ideas.map(idea => <Idea key={idea.id} {...idea} />)}</div>
       </div>
     )
   }
