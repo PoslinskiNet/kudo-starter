@@ -11,7 +11,7 @@ export default class Idea extends React.PureComponent {
     const { title, description } = this.props
 
     return (
-      <div className="col-md-4">
+      <div className="col-md-4">§
         <div className="idea">
           <div className="idea__cover">
             <img src="http://www.kpzps.pl/zal/banery/20_baner_1.jpg" alt="idea" />
@@ -25,7 +25,7 @@ export default class Idea extends React.PureComponent {
             <h2 className="idea__text">{description}</h2>
             <h3 className="idea__giver">Idea giver</h3>
 
-            <div className="idea__actions btn-group ">
+            <div className="idea__actions">
               <Support giveKudos={this.giveKudos}/>
             </div>
           </div>
