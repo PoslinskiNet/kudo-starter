@@ -11,6 +11,10 @@ export default class Idea extends React.PureComponent {
           <div className="idea__cover">
             <img src="http://www.kpzps.pl/zal/banery/20_baner_1.jpg" alt="idea" />
           </div>
+          <div>
+            <div>35 / 50</div>
+            <div>* 13</div>
+          </div>
           <div className="idea__content">
             <h1 className="idea__title">{title}</h1>
             <h2 className="idea__text">{description}</h2>
