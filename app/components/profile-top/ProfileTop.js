@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-export default class ProfileTop extends React.Component {
+export default class ProfileTop extends React.PureComponent {
   state = {
     kudosGiven: 12,
-  }
+  };
 
   render() {
-    const { kudosGiven } = this.state
+    const { kudosGiven } = this.state;
     const {
       user: { avatarUrl, name },
-    } = this.props
+    } = this.props;
 
     return (
       <div className="profile flex-column flex-align-center">
@@ -19,6 +19,6 @@ export default class ProfileTop extends React.Component {
         <div className="profile__name">{name}</div>
         <div>{kudosGiven}/20</div>
       </div>
-    )
+    );
   }
 }

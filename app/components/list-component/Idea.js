@@ -1,26 +1,25 @@
-import React from 'react'
-import Support from './Support'
+import React from 'react';
+import Support from './Support';
 
 export default class Idea extends React.PureComponent {
-  giveKudos = (amount = 1) => {
-    const { id, giveKudos } = this.props
-    giveKudos(id, amount)
-  }
+  giveKudos = amount => {
+    const { id, giveKudos } = this.props;
+    giveKudos(id, amount);
+  };
 
   isValidURL = str => {
-    const a = document.createElement('a')
-    a.href = str
-    return a.host && a.host != window.location.host
-  }
+    const a = document.createElement('a');
+    a.href = str;
+    return a.host && a.host != window.location.host;
+  };
 
   render() {
-    const { title, shortDescription, image, target, avatarUrl } = this.props
+    const { title, shortDescription, image, target, avatarUrl } = this.props;
     const inventorImage =
-      avatarUrl || 'https://www.fancyhands.com/images/default-avatar-250x250.png'
+      avatarUrl || 'https://www.fancyhands.com/images/default-avatar-250x250.png';
     const ideaImage = this.isValidURL(image)
       ? image
-      : 'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg'
-
+      : 'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg';
 
     return (
       <div className="col-md-4">
@@ -51,6 +50,6 @@ export default class Idea extends React.PureComponent {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

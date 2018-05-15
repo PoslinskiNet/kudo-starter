@@ -1,24 +1,24 @@
-import React from 'react'
+import React from 'react';
 
 export default class Support extends React.PureComponent {
   state = {
-    value: 1,
+    value: '1',
     showButton: true,
-  }
+  };
 
-  isActive = buttonValue => (this.state.value >= buttonValue ? 'active' : '')
-  selectAmount = ({ target: { value } }) => this.setState({ value })
-  toggleSupport = () => this.setState({ showButton: !this.state.showButton })
+  isActive = buttonValue => (this.state.value >= buttonValue ? 'active' : '');
+  selectAmount = ({ target: { value } }) => this.setState({ value });
+  toggleSupport = () => this.setState({ showButton: !this.state.showButton });
 
   sendKudos = () => {
-    const { showButton, value } = this.state
+    const { showButton, value } = this.state;
 
-    this.props.giveKudos(value)
-    this.setState({ showButton: !showButton })
-  }
+    this.props.giveKudos(value);
+    this.setState({ showButton: !showButton, value: '1' });
+  };
 
   render() {
-    const { showButton } = this.state
+    const { showButton } = this.state;
 
     return (
       <div>
@@ -78,6 +78,6 @@ export default class Support extends React.PureComponent {
           </div>
         )}
       </div>
-    )
+    );
   }
 }

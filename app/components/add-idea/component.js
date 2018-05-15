@@ -1,6 +1,5 @@
-import ReactComponent from 'kudo-starter/components/base/react-component'
+import ReactComponent from 'kudo-starter/components/base/react-component';
 import { inject as service } from '@ember/service';
-import EmberObject from '@ember/object';
 import AddIdea from './AddIdea';
 
 export default ReactComponent.extend({
@@ -9,24 +8,26 @@ export default ReactComponent.extend({
   store: service(),
 
   didInsertElement() {
-    this._super(...arguments)
-    this.reactRender(<AddIdea addIdea={this.actions.addIdea.bind(this)}/>)
+    this._super(...arguments);
+    this.reactRender(<AddIdea addIdea={this.actions.addIdea.bind(this)} />);
   },
 
   actions: {
     addIdea(data) {
       let currentUser = this.get('session.currentUser');
 
-      this.get('store').createRecord('idea', {
-        title: data.title,
-        shortDescription: data.shortDescription,
-        description: data.description,
-        image: data.image,
-        target: data.target,
-        inventorId: currentUser.id
-      }).save();
+      this.get('store')
+        .createRecord('idea', {
+          title: data.title,
+          shortDescription: data.shortDescription,
+          description: data.description,
+          image: data.image,
+          target: data.target,
+          inventorId: currentUser.id,
+        })
+        .save();
 
       this.get('router').transitionTo('ideas');
-    }
-  }
+    },
+  },
 });

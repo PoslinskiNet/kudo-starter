@@ -15,6 +15,7 @@ module.exports = {
     browser: true,
   },
   rules: {
+    semi: ['error', 'always'],
     'no-debugger': 'off',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',

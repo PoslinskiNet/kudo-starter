@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { task, timeout } from 'ember-concurrency';
+import { task } from 'ember-concurrency';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
@@ -16,8 +16,8 @@ export default Component.extend({
     this.get('query').perform();
   },
 
-  query: task(function * () {
+  query: task(function*() {
     const payload = yield this.get('store').findAll('idea');
     this.set('data', payload);
-  }).restartable()
+  }).restartable(),
 });
