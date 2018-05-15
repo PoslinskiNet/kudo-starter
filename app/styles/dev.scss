@@ -9,3 +9,14 @@
 .margin-top-m {
   margin-top: 10px;
 }
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+
+  .lds-ripple {
+    align-self: center;
+  }
+}
