@@ -1,0 +1,39 @@
+
+.ideas-list {
+
+}
+
+.idea {
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    overflow: hidden;
+    flex-direction: column;
+    
+    &__description, &__actions {
+        padding: 10px;
+    }
+
+    &__title {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    &__text {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    &__giver {
+        font-size: 11px;
+        color: #4f4f4f;
+    }
+
+    &__cover {
+        img {
+            width: 100%;
+        }
+    }
+
+    
+
+}
