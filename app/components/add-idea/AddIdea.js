@@ -11,9 +11,9 @@ export default class AddIdea extends React.Component {
   render() {
     return (
       <form onSubmit={this.addIdea}>
-        <input name="title" type="text" onChange={this.handleChange} />
-        <input name="shortDescription" type="text" onChange={this.handleChange} />
-        <input name="description" type="textarea" onChange={this.handleChange} />
+        <input name="title" placeholder="title" type="text" onChange={this.handleChange} />
+        <input name="shortDescription" placeholder="Short description" type="text" onChange={this.handleChange} />
+        <input name="description" placeholder="Description" type="textarea" onChange={this.handleChange} />
         <input name="image" type="text" onChange={this.handleChange} />
         <input name="target" type="number" onChange={this.handleChange} />
         <button type="submit">Add</button>
