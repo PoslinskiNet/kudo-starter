@@ -12,10 +12,13 @@ export default class Filter extends React.PureComponent {
           My ideas
         </button>
         <button className="btn btn-default" onClick={this.changeFilter} name="2">
-          Supported
+          Popular
         </button>
         <button className="btn btn-default" onClick={this.changeFilter} name="3">
-          I chuj
+          Supported
+        </button>
+        <button className="btn btn-default" onClick={this.changeFilter} name="4">
+          Completed
         </button>
       </div>
     )
