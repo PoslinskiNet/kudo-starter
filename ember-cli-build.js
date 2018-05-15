@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app')
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -8,26 +8,27 @@ module.exports = function(defaults) {
       extension: 'scss'
     },
     babel: {
+      presets: ['stage-0'],
       plugins: [
         'transform-class-properties',
         'transform-react-jsx',
-        'transform-object-rest-spread'
-      ]
-    }
-  });
+        'transform-object-rest-spread',
+      ],
+    },
+  })
 
   app.import({
     development: 'node_modules/react/umd/react.development.js',
-    production: 'node_modules/react/umd/react.production.min.js'
-  });
+    production: 'node_modules/react/umd/react.production.min.js',
+  })
 
   app.import({
     development: 'node_modules/react-dom/umd/react-dom.development.js',
-    production: 'node_modules/react-dom/umd/react-dom.production.min.js'
-  });
+    production: 'node_modules/react-dom/umd/react-dom.production.min.js',
+  })
 
-  app.import('vendor/shims/react.js');
-  app.import('vendor/shims/react-dom.js');
+  app.import('vendor/shims/react.js')
+  app.import('vendor/shims/react-dom.js')
 
-  return app.toTree();
-};
+  return app.toTree()
+}

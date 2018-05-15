@@ -1,45 +1,35 @@
 module.exports = {
+  parser: 'babel-eslint',
   root: true,
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
-      experimentalObjectRestSpread: true
-    }
+      experimentalObjectRestSpread: true,
+    },
   },
-  plugins: [
-    'babel',
-    'react',
-    'ember'
-  ],
-  extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended'
-  ],
+  plugins: ['babel', 'react', 'ember'],
+  extends: ['eslint:recommended', 'plugin:ember/recommended'],
   env: {
-    browser: true
+    browser: true,
   },
   rules: {
     'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error'
+    'react/jsx-uses-vars': 'error',
   },
   overrides: [
     // node files
     {
-      files: [
-        'testem.js',
-        'ember-cli-build.js',
-        'config/**/*.js'
-      ],
+      files: ['testem.js', 'ember-cli-build.js', 'config/**/*.js'],
       parserOptions: {
         sourceType: 'script',
-        ecmaVersion: 2015
+        ecmaVersion: 2015,
       },
       env: {
         browser: false,
-        node: true
-      }
+        node: true,
+      },
     },
 
     // test files
@@ -47,8 +37,8 @@ module.exports = {
       files: ['tests/**/*.js'],
       excludedFiles: ['tests/dummy/**/*.js'],
       env: {
-        embertest: true
-      }
-    }
-  ]
-};
+        embertest: true,
+      },
+    },
+  ],
+}
