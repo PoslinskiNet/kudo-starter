@@ -1,7 +1,1 @@
-{{session.currentUser.name}}
-
-{{#if session.currentUser}}
-  {{profile-top}}
-{{/if}}
-
-{{outlet}}
+{{#if session.currentUser}} {{profile-top}} {{/if}} {{outlet}}
