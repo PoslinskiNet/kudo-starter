@@ -7,8 +7,15 @@ export default ReactComponent.extend({
   session: service(),
 
   didInsertElement() {
-    this._super(...arguments)
     this.renderList()
+  },
+
+  didReceiveAttrs() {
+    this._super(...arguments)
+
+    if (this.element) {
+      this.renderList()
+    }
   },
 
   renderList() {
@@ -23,7 +30,7 @@ export default ReactComponent.extend({
       inventor: idea.get('inventor'),
     }))
 
-    this.reactRender(
+    return this.reactRender(
       <List ideas={data} giveKudos={this.actions.giveKudos.bind(this)} />,
       this.element,
     )
