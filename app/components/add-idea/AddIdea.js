@@ -18,12 +18,7 @@ export default class AddIdea extends React.Component {
           type="text"
           onChange={this.handleChange}
         />
-        <input
-          name="description"
-          placeholder="Description"
-          type="textarea"
-          onChange={this.handleChange}
-        />
+        <textarea name="description" placeholder="Description" onChange={this.handleChange} />
         <input name="image" placeholder="Image url" type="text" onChange={this.handleChange} />
         <input name="target" placeholder="Kudo cap " type="number" onChange={this.handleChange} />
         <button type="submit">Add</button>
