@@ -1,5 +1,6 @@
 import ReactComponent from 'kudo-starter/components/base/react-component'
 import { inject as service } from '@ember/service';
+import EmberObject from '@ember/object';
 import AddIdea from './AddIdea';
 
 export default ReactComponent.extend({
@@ -22,7 +23,7 @@ export default ReactComponent.extend({
         description: data.description,
         image: data.image,
         target: data.target,
-        inventor: currentUser
+        inventor: EmberObject.create(currentUser)
       }).save();
 
       this.get('router').transitionTo('ideas');
