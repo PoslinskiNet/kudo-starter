@@ -11,16 +11,22 @@ export default class Idea extends React.PureComponent {
     const { title, description } = this.props
 
     return (
-      <div className="col-md-4">§
+      <div className="col-md-4">
         <div className="idea">
           <div className="idea__cover">
             <img src="http://www.kpzps.pl/zal/banery/20_baner_1.jpg" alt="idea" />
           </div>
-          <div>
-            <div>35 / 50</div>
-            <div>* 13</div>
+          <div className="idea__progress flex-centered">
+            <div className="progress-circle">
+              <div className="progress-circle-inner">
+                <span>35</span>
+                <span className="progress__separator"></span>
+                <span>50</span>
+              </div>
+            </div>
           </div>
           <div className="idea__content">
+            <div><span className="glyphicon glyphicon-user" aria-hidden="true"></span> 13</div>
             <h1 className="idea__title">{title}</h1>
             <h2 className="idea__text">{description}</h2>
             <h3 className="idea__giver">Idea giver</h3>
