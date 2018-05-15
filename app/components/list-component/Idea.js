@@ -8,7 +8,7 @@ export default class Idea extends React.PureComponent {
   }
 
   render() {
-    const { title, description, image, target, inventor } = this.props
+    const { title, shortDescription, image, target, inventor } = this.props
 
     return (
       <div className="col-md-4">
@@ -30,7 +30,7 @@ export default class Idea extends React.PureComponent {
               <span className="glyphicon glyphicon-user" aria-hidden="true" /> 13
             </div>
             <h1 className="idea__title">{title}</h1>
-            <h2 className="idea__text">{description}</h2>
+            <h2 className="idea__text">{shortDescription}</h2>
             <h3 className="idea__giver">
               <img src={inventor.avatarUrl} alt="idea" />
             </h3>
