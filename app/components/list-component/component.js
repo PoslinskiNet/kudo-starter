@@ -1,6 +1,6 @@
 import ReactComponent from 'kudo-starter/components/base/react-component'
 import List from './List'
-import { inject as service } from '@ember/service';
+import { inject as service } from '@ember/service'
 
 export default ReactComponent.extend({
   store: service(),
@@ -20,25 +20,22 @@ export default ReactComponent.extend({
     }))
 
     this.reactRender(
-      <List
-        ideas={data}
-        giveKudos={this.actions.giveKudos.bind(this)}
-      />,
-      this.element
+      <List ideas={data} giveKudos={this.actions.giveKudos.bind(this)} />,
+      this.element,
     )
   },
 
   actions: {
     giveKudos(id, amount) {
-      const store = this.get('store');
-      const user = this.get('session.currentUser');
-      const idea = this.get('store').peekRecord('idea', id);
+      const store = this.get('store')
+      const user = this.get('session.currentUser')
+      const idea = store.peekRecord('idea', id)
 
-      return this.get('store').createRecord('donate', {
+      return store.createRecord('donate', {
         user,
         idea,
         amount,
       })
-    }
-  }
+    },
+  },
 })
