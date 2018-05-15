@@ -2,6 +2,10 @@
 
 https://slides.com/agnieszkapawlicka/kudo-starter
 
+# Demo
+
+https://ideas-app-3b447.firebaseapp.com
+
 # kudo-starter
 
 This README outlines the details of collaborating on this Ember application.
