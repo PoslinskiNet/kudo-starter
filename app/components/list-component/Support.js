@@ -28,29 +28,33 @@ export default class Support extends React.PureComponent {
           </button>
         ) : (
           <div>
-            <span>
-              <button value="1" onClick={this.selectAmount}>
-                $
+            <div class="row">
+              <span>
+                <button className="btn button margin-s" value="1" onClick={this.selectAmount}>
+                  $
+                </button>
+                <button className="btn button margin-s" value="2" onClick={this.selectAmount}>
+                  $
+                </button>
+                <button className="btn button margin-s" value="3" onClick={this.selectAmount}>
+                  $
+                </button>
+                <button className="btn button margin-s" value="4" onClick={this.selectAmount}>
+                  $
+                </button>
+                <button className="btn button margin-s" value="5" onClick={this.selectAmount}>
+                  $
+                </button>
+              </span>
+            </div>
+            <div class="row margin-top-m">
+              <button onClick={this.sendKudos} className="btn button">
+                Accept
               </button>
-              <button value="2" onClick={this.selectAmount}>
-                $
+              <button onClick={this.toggleSupport} className="btn button">
+                Decline
               </button>
-              <button value="3" onClick={this.selectAmount}>
-                $
-              </button>
-              <button value="4" onClick={this.selectAmount}>
-                $
-              </button>
-              <button value="5" onClick={this.selectAmount}>
-                $
-              </button>
-            </span>
-            <button onClick={this.sendKudos} className="btn button">
-              Accept
-            </button>
-            <button onClick={this.toggleSupport} className="btn button">
-              Decline
-            </button>
+            </div>
           </div>
         )}
       </div>
