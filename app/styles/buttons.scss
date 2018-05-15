@@ -1,5 +1,10 @@
 .button {
-    border-radius: 20px;
-    border: 2px solid;
-    color: $primary-color;
+  border-radius: 20px;
+  border: 2px solid;
+  color: $primary-color;
+  outline: 0;
+}
+
+.active {
+  color: $secondary-color;
 }

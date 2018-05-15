@@ -6,6 +6,8 @@ export default class Support extends React.PureComponent {
     showButton: true,
   }
 
+  isActive = buttonValue => (this.state.value >= buttonValue ? 'active' : '')
+  selectAmount = ({ target: { value } }) => this.setState({ value })
   toggleSupport = () => this.setState({ showButton: !this.state.showButton })
 
   sendKudos = () => {
@@ -14,8 +16,6 @@ export default class Support extends React.PureComponent {
     this.props.giveKudos(value)
     this.setState({ showButton: !showButton })
   }
-
-  selectAmount = ({ target: { value } }) => this.setState({ value })
 
   render() {
     const { showButton } = this.state
@@ -28,26 +28,46 @@ export default class Support extends React.PureComponent {
           </button>
         ) : (
           <div>
-            <div class="row">
+            <div className="row">
               <span>
-                <button className="btn button margin-s" value="1" onClick={this.selectAmount}>
+                <button
+                  className={`btn button margin-s ${this.isActive('1')}`}
+                  value="1"
+                  onClick={this.selectAmount}
+                >
                   $
                 </button>
-                <button className="btn button margin-s" value="2" onClick={this.selectAmount}>
+                <button
+                  className={`btn button margin-s ${this.isActive('2')}`}
+                  value="2"
+                  onClick={this.selectAmount}
+                >
                   $
                 </button>
-                <button className="btn button margin-s" value="3" onClick={this.selectAmount}>
+                <button
+                  className={`btn button margin-s ${this.isActive('3')}`}
+                  value="3"
+                  onClick={this.selectAmount}
+                >
                   $
                 </button>
-                <button className="btn button margin-s" value="4" onClick={this.selectAmount}>
+                <button
+                  className={`btn button margin-s ${this.isActive('4')}`}
+                  value="4"
+                  onClick={this.selectAmount}
+                >
                   $
                 </button>
-                <button className="btn button margin-s" value="5" onClick={this.selectAmount}>
+                <button
+                  className={`btn button margin-s ${this.isActive('5')}`}
+                  value="5"
+                  onClick={this.selectAmount}
+                >
                   $
                 </button>
               </span>
             </div>
-            <div class="row margin-top-m">
+            <div className="row margin-top-m">
               <button onClick={this.sendKudos} className="btn button">
                 Accept
               </button>
