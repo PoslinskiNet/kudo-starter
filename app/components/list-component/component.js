@@ -1,5 +1,5 @@
 import ReactComponent from 'kudo-starter/components/base/react-component'
-import List from '../base/List'
+import List from './List'
 
 export default ReactComponent.extend({
   didInsertElement() {
