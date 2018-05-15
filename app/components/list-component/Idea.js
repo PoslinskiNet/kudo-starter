@@ -8,22 +8,20 @@ export default class Idea extends React.PureComponent {
   }
 
   render() {
-    const { title, description } = this.props
-
-    console.log(this.props)
+    const { title, description, image, target, inventor } = this.props
 
     return (
       <div className="col-md-4">
         <div className="idea">
           <div className="idea__cover">
-            <img src="http://www.kpzps.pl/zal/banery/20_baner_1.jpg" alt="idea" />
+            <img src={image} alt="idea" />
           </div>
           <div className="idea__progress flex-centered">
             <div className="progress-circle">
               <div className="progress-circle-inner">
-                <span>35</span>
+                <span>35----</span>
                 <span className="progress__separator" />
-                <span>50</span>
+                <span>{target}</span>
               </div>
             </div>
           </div>
@@ -33,7 +31,9 @@ export default class Idea extends React.PureComponent {
             </div>
             <h1 className="idea__title">{title}</h1>
             <h2 className="idea__text">{description}</h2>
-            <h3 className="idea__giver">Idea giver</h3>
+            <h3 className="idea__giver">
+              <img src={inventor.avatarUrl} alt="idea" />
+            </h3>
 
             <div className="idea__actions">
               <Support giveKudos={this.giveKudos} />
