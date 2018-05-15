@@ -19,14 +19,11 @@ export default class Idea extends React.PureComponent {
           <div className="idea__giver">
             <img src={inventor.avatarUrl} alt="idea" />
           </div>
-        
-          <div className="idea__cover">
-            <img src={ideaImage} alt="idea" />
-          </div>
+          <div className="idea__cover" style={{backgroundImage: `url(${ideaImage})`}} />
           <div className="idea__progress flex-centered">
             <div className="progress-circle">
               <div className="progress-circle-inner">
-                <span>35----</span>
+                <span>35</span>
                 <span className="progress__separator" />
                 <span>{target}</span>
               </div>
