@@ -17,6 +17,10 @@ export default ReactComponent.extend({
       id: idea.get('id'),
       title: idea.get('title'),
       description: idea.get('description'),
+      shortDescription: idea.get('shortDescription'),
+      image: idea.get('image'),
+      target: idea.get('target'),
+      inventor: idea.get('inventor'),
     }))
 
     this.reactRender(
