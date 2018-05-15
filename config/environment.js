@@ -27,6 +27,10 @@ module.exports = function(environment) {
       authDomain: 'ideas-app-3b447.firebaseapp.com',
       databaseURL: 'https://ideas-app-3b447.firebaseio.com/',
       storageBucket: 'YOUR-FIREBASE-APP.appspot.com',
+    },
+
+    torii: {
+      sessionServiceName: 'session'
     }
   };
 
