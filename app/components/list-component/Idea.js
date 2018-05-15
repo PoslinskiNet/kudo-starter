@@ -2,6 +2,11 @@ import React from 'react'
 import Support from './Support'
 
 export default class Idea extends React.PureComponent {
+  giveKudos = (amount) => {
+    const { id, giveKudos } = this.props;
+    giveKudos(id, amount);
+  }
+
   render() {
     const { title, description } = this.props
 
@@ -21,7 +26,7 @@ export default class Idea extends React.PureComponent {
             <h3 className="idea__giver">Idea giver</h3>
 
             <div className="idea__actions btn-group ">
-              <Support />
+              <Support giveKudos={this.giveKudos}/>
             </div>
           </div>
         </div>

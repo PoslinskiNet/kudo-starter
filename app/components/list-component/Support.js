@@ -18,7 +18,7 @@ export default class Support extends React.PureComponent {
         ) : (
           <div>
             <span>$ $ $ $ $</span>
-            <button onClick={this.changeState} className="btn btn-success">
+            <button onClick={this.props.giveKudos} className="btn btn-success">
               Accept
             </button>
             <button onClick={this.changeState} className="btn btn-success">
