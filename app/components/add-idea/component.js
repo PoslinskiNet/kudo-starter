@@ -23,7 +23,7 @@ export default ReactComponent.extend({
         description: data.description,
         image: data.image,
         target: data.target,
-        inventor: EmberObject.create(currentUser)
+        inventorId: currentUser.id
       }).save();
 
       this.get('router').transitionTo('ideas');

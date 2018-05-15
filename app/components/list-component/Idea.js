@@ -14,12 +14,13 @@ export default class Idea extends React.PureComponent {
   }
 
   render() {
-    const { title, shortDescription, image, target, inventor } = this.props
+    const { title, shortDescription, image, target, avatarUrl } = this.props
     const inventorImage =
-      inventor.avatarUrl || 'https://www.fancyhands.com/images/default-avatar-250x250.png'
+      avatarUrl || 'https://www.fancyhands.com/images/default-avatar-250x250.png'
     const ideaImage = this.isValidURL(image)
       ? image
       : 'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg'
+
 
     return (
       <div className="col-md-4">

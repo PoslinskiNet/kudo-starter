@@ -20,15 +20,20 @@ export default ReactComponent.extend({
 
   renderList() {
     const ideas = this.get('ideas')
-    const data = ideas.map(idea => ({
-      id: idea.get('id'),
-      title: idea.get('title'),
-      description: idea.get('description'),
-      shortDescription: idea.get('shortDescription'),
-      image: idea.get('image'),
-      target: idea.get('target'),
-      inventor: idea.get('inventor'),
-    }))
+    const data = ideas.map(idea => {
+
+      console.log(idea.get('inventorId') ? this.get('store').findRecord('user', idea.get('inventorId')).get('avatarUrl') : undefined);
+
+      return {
+        id: idea.get('id'),
+        title: idea.get('title'),
+        description: idea.get('description'),
+        shortDescription: idea.get('shortDescription'),
+        image: idea.get('image'),
+        target: idea.get('target'),
+        avatarUrl: idea.get('inventorId') ? this.get('store').find('user', idea.get('inventorId')).get('avatarUrl') : undefined,
+      }
+    });
 
     const component = this.reactRender(
       <List ideas={data} giveKudos={this.actions.giveKudos.bind(this)} />,
