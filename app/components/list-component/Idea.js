@@ -9,6 +9,9 @@ export default class Idea extends React.PureComponent {
 
   render() {
     const { title, shortDescription, image, target, inventor } = this.props
+    const ideaImage =
+      image ||
+      'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg'
 
     return (
       <div className="col-md-4">
@@ -18,7 +21,7 @@ export default class Idea extends React.PureComponent {
           </div>
         
           <div className="idea__cover">
-            <img src={image} alt="idea" />
+            <img src={ideaImage} alt="idea" />
           </div>
           <div className="idea__progress flex-centered">
             <div className="progress-circle">
