@@ -38,7 +38,7 @@ export default class Idea extends React.PureComponent {
             </div>
           </div>
           <div className="idea__content">
-            <div>
+            <div className="idea__supporters">
               <span className="glyphicon glyphicon-user" aria-hidden="true" /> 13
             </div>
             <h1 className="idea__title">{title}</h1>
