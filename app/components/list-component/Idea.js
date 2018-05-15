@@ -2,6 +2,8 @@ import React from 'react'
 
 export default class Idea extends React.PureComponent {
   render() {
+    const { title, description } = this.props
+
     return (
       <div className="col-md-4">
         <div className="idea">
@@ -9,8 +11,8 @@ export default class Idea extends React.PureComponent {
             <img src="http://www.kpzps.pl/zal/banery/20_baner_1.jpg" alt="idea" />
           </div>
           <div className="idea__content">
-            <h1 className="idea__title">Title</h1>
-            <h2 className="idea__text">Description</h2>
+            <h1 className="idea__title">{title}</h1>
+            <h2 className="idea__text">{description}</h2>
             <h3 className="idea__giver">Idea giver</h3>
 
             <div className="idea__actions btn-group ">
@@ -18,8 +20,6 @@ export default class Idea extends React.PureComponent {
               <button className="btn btn-success">Bump +5</button>
             </div>
           </div>
-
-          
         </div>
       </div>
     )
