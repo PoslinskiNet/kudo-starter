@@ -31,5 +31,5 @@ export default Component.extend({
   willDestroyComponent() {
     this._super();
     this.unmountReactElement();
-  }
+  },
 });

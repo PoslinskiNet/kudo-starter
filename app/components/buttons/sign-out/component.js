@@ -7,9 +7,11 @@ export default Component.extend({
 
   actions: {
     signOut() {
-      return this.get('session').close().then(() => {
-        this.get('router').transitionTo('login')
-      });
-    }
-  }
+      return this.get('session')
+        .close()
+        .then(() => {
+          this.get('router').transitionTo('login');
+        });
+    },
+  },
 });

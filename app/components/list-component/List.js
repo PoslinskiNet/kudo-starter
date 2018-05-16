@@ -1,9 +1,9 @@
-import React from 'react'
-import Idea from './Idea'
+import React from 'react';
+import Idea from './Idea';
 
 export default class List extends React.Component {
   render() {
-    const { ideas } = this.props
+    const { ideas } = this.props;
 
     return (
       <div className="container ideas-list">
@@ -11,6 +11,6 @@ export default class List extends React.Component {
           {ideas.map(idea => <Idea key={idea.id} {...idea} giveKudos={this.props.giveKudos} />)}
         </div>
       </div>
-    )
+    );
   }
 }

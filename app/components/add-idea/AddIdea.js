@@ -1,18 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-export default class AddIdea extends React.Component {
-  state = {}
+export default class AddIdea extends React.PureComponent {
+  state = {};
 
-  handleAreaChange = ({ target: { innerText } }) => this.setState({ description: innerText })
-  handleChange = ({ target: { name, value } }) => this.setState({ [name]: value })
+  handleAreaChange = ({ target: { innerText } }) => this.setState({ description: innerText });
+  handleChange = ({ target: { name, value } }) => this.setState({ [name]: value });
   addIdea = event => {
-    event.preventDefault()
-    this.props.addIdea(this.state)
-  }
+    event.preventDefault();
+    this.props.addIdea(this.state);
+  };
 
   render() {
     return (
-      <div className="center-block" style={{width: 500, padding: '30px 0'}}>
+      <div className="center-block" style={{ width: 500, padding: '30px 0' }}>
         <form onSubmit={this.addIdea}>
           <div className="form-group">
             <label>Title</label>
@@ -52,11 +52,19 @@ export default class AddIdea extends React.Component {
           </div>
 
           <div class="flex-space-between">
-            <a href="/ideas" className="btn button button--muted btn-lg">Cancel</a>
-            <button type="submit" className="btn button btn-lg btn-block" style={{marginLeft: 20}}>Add</button>
+            <a href="/ideas" className="btn button button--muted btn-lg">
+              Cancel
+            </a>
+            <button
+              type="submit"
+              className="btn button btn-lg btn-block"
+              style={{ marginLeft: 20 }}
+            >
+              Add
+            </button>
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
