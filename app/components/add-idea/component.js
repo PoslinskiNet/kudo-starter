@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 
-export default ReactComponent.extend({
+export default Component.extend({
   router: service(),
   session: service(),
   store: service(),
