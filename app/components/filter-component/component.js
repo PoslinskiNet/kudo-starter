@@ -1,9 +1,11 @@
-import ReactComponent from 'kudo-starter/components/base/react-component';
-import Filter from './Filter';
+import Component from '@ember/component';
 
-export default ReactComponent.extend({
-  didInsertElement() {
-    this._super(...arguments);
-    this.reactRender(<Filter />);
-  },
+export default Component.extend({
+  filterValue: '',
+
+  actions: {
+    changeFilter(newFilterValue) {
+      this.set('filterValue', newFilterValue);
+    }
+  }
 });

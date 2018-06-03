@@ -10,8 +10,6 @@ export default ReactComponent.extend({
     addIdea() {
       let currentUser = this.get('session.currentUser');
 
-      debugger;
-
       this.get('store')
         .createRecord('idea', {
           title: this.get('title'),
