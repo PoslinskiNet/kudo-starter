@@ -1,18 +1,9 @@
-import ReactComponent from 'kudo-starter/components/base/react-component';
-import ProfileTop from './ProfileTop';
+import Component from '@ember/component';
+import { alias } from '@ember/object/computed';
 import { inject as service } from '@ember/service';
 
-export default ReactComponent.extend({
+export default Component.extend({
   session: service(),
 
-  didInsertElement() {
-    this._super(...arguments);
-    this.renderProfile();
-  },
-
-  renderProfile() {
-    const user = this.get('session.currentUser');
-
-    this.reactRender(<ProfileTop user={user} />, this.element);
-  },
+  user: alias('session.currentUser')
 });

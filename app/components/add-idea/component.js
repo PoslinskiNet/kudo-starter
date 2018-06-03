@@ -1,4 +1,4 @@
-import ReactComponent from 'kudo-starter/components/base/react-component';
+import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 
 export default ReactComponent.extend({
