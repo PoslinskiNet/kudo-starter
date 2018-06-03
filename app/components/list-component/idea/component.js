@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
 
-const defaultIdeaImage = 'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg'
+const defaultIdeaImage = 'http://www.garstangicecreamfestival.co.uk/wp-content/uploads/2017/11/pexels-photo-461430-360x240.jpeg';
 const defaultInventorImage = 'https://www.fancyhands.com/images/default-avatar-250x250.png';
 
 export default Component.extend({
