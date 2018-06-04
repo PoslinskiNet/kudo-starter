@@ -8,7 +8,7 @@ export default ToriiFirebaseAdapter.extend({
     return hash({
       uid: authentication.uid,
       currentUser: this._findOrCreateUser(authentication)
-    })
+    });
   },
   _findOrCreateUser({uid, photoURL: avatarUrl, displayName: name}) {
     const store = this.get('store');
@@ -21,6 +21,6 @@ export default ToriiFirebaseAdapter.extend({
       .catch(function() {
         let user = store.createRecord('user', {avatarUrl, name, id: uid});
         return user.save();
-      })
+      });
   }
 });

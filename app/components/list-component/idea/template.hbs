@@ -1,0 +1,28 @@
+<div class="idea">
+  <div class="idea__giver">
+    <img src={{inventorImage}} alt="inventor" />
+  </div>
+
+  <div class="idea__cover" style="background-image: url('{{ideaImage}}')" />
+  <div class="idea__progress flex-centered">
+    <div class="progress-circle">
+      <div class="progress-circle-inner">
+        <span>35</span>
+        <span class="progress__separator" />
+        <span>{{idea.target}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="idea__content">
+    <div class="idea__supporters">
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 13
+    </div>
+    <h1 class="idea__title">{{idea.title}}</h1>
+    <h2 class="idea__text">{{idea.shortDescription}}</h2>
+
+    <div class="idea__actions">
+      {{list-component/idea/support idea=idea}}
+    </div>
+  </div>
+</div>

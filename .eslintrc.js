@@ -9,16 +9,14 @@ module.exports = {
       experimentalObjectRestSpread: true,
     },
   },
-  plugins: ['babel', 'react', 'ember'],
+  plugins: ['babel', 'ember'],
   extends: ['eslint:recommended', 'plugin:ember/recommended'],
   env: {
     browser: true,
   },
   rules: {
     semi: ['error', 'always'],
-    'no-debugger': 'off',
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
+    'no-debugger': 'off'
   },
   overrides: [
     // node files
