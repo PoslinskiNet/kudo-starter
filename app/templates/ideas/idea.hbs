@@ -1,1 +1,32 @@
-{{outlet}}
+<img src={{model.image}} alt={{model.title}} />
+
+{{model.title}}
+
+<hr />
+
+<div class="flex-column flex-align-center">
+
+  <div>
+    {{model.description}}
+  </div>
+
+  <div>
+
+    Target: {{model.target}}
+
+    <hr />
+
+    <h2>Creator:</h2>
+
+    {{ember-initials/image image=model.assignee.avatarUrl}}
+
+    <hr />
+
+    <h2>Donations:</h2>
+
+    {{#each model.donations as donation}}
+      {{ember-initials/image image=donation.user.avatarUrl}} donated: {{donation.amount}}
+    {{/each}}
+  </div>
+
+</div>
