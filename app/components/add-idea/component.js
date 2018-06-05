@@ -8,8 +8,6 @@ export default Component.extend({
 
   actions: {
     addIdea() {
-      let currentUser = this.get('session.currentUser');
-
       this.get('store')
         .createRecord('idea', {
           title: this.get('title'),
@@ -17,7 +15,7 @@ export default Component.extend({
           description: this.get('description'),
           image: this.get('image'),
           target: this.get('target'),
-          inventorId: currentUser.id,
+          inventor: this.get('session.currentUser')
         })
         .save();
 
