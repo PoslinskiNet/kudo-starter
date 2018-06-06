@@ -1,13 +1,14 @@
 import Service from '@ember/service';
+import { inject as service } from '@ember/service';
 
 export default Service.extend({
+  store: service(),
+
   init() {
     this._super(...arguments);
 
-    this.set('currentUser', {
-      avatarUrl: "https://lh5.googleusercontent.com/-lWm6H2F14S4/AAAAAAAAAAI/AAAAAAAAAGw/I7wWZ51C0CA/photo.jpg",
-      id : "L4rZFdUfAnO9y96feaJ5aOJg98L2",
-      name: "Dawid Pośliński"
+    this.get('store').findRecord('user', 'L4rZFdUfAnO9y96feaJ5aOJg98L2').then(user => {
+      this.set('currentUser', user);
     });
   }
 });

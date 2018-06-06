@@ -1,0 +1,4 @@
+{{#each donations as donation}}
+  {{ember-initials/image image=donation.user.avatarUrl}} donated: {{donation.amount}}
+  <br />
+{{/each}}

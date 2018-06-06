@@ -7,7 +7,6 @@ export default DS.Model.extend({
   image: DS.attr('string'),
   target: DS.attr('number'),
   inventor: DS.belongsTo('user'),
-  inventorId: DS.attr('string'),
   assignee: DS.belongsTo('user'),
   donations: DS.hasMany('donation')
 });
