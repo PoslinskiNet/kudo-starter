@@ -1,6 +1,6 @@
 <img src={{model.image}} alt={{model.title}} />
 
-{{model.title}}
+<h1>{{model.title}}</h1>
 
 <hr />
 
@@ -8,6 +8,10 @@
 
   <div>
     {{model.description}}
+  </div>
+
+  <div class="idea__actions">
+    {{list-component/idea/support idea=model}}
   </div>
 
   <div>
@@ -24,9 +28,9 @@
 
     <h2>Donations:</h2>
 
-    {{#each model.donations as donation}}
-      {{ember-initials/image image=donation.user.avatarUrl}} donated: {{donation.amount}}
-    {{/each}}
+    {{donations-list}}
+    {{!-- use when rdy on the backend --}}
+    {{!-- {{donations-list donations=donations}} --}}
   </div>
 
 </div>
