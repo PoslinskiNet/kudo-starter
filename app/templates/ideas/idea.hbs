@@ -1,36 +1,39 @@
-<img src={{model.image}} alt={{model.title}} />
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <img src={{model.image}} alt={{model.title}} />
+    </div>
+    <div class="col-md-9">
+      <h1>{{model.title}}</h1>
+      
+      <p>{{model.description}}</p>
+      
+      <div class="idea__actions">
+        {{list-component/idea/support idea=model}}
+      </div>
 
-<h1>{{model.title}}</h1>
+      <div>
+        Target: {{model.target}}
 
-<hr />
+        <hr />
 
-<div class="flex-column flex-align-center">
+        <h2>Inventor:</h2>
 
-  <div>
-    {{model.description}}
+        {{ember-initials/image image=model.inventor.avatarUrl}} {{model.inventor.name}}
+
+        <hr />
+
+        <h2>Donations:</h2>
+
+        {{donations-list}}
+        {{!-- use when rdy on the backend --}}
+        {{!-- {{donations-list donations=donations}} --}}
+      </div>
+
+    </div>
   </div>
 
-  <div class="idea__actions">
-    {{list-component/idea/support idea=model}}
-  </div>
-
-  <div>
-
-    Target: {{model.target}}
-
-    <hr />
-
-    <h2>Inventor:</h2>
-
-    {{ember-initials/image image=model.inventor.avatarUrl}} {{model.inventor.name}}
-
-    <hr />
-
-    <h2>Donations:</h2>
-
-    {{donations-list}}
-    {{!-- use when rdy on the backend --}}
-    {{!-- {{donations-list donations=donations}} --}}
-  </div>
+  
+  
 
 </div>

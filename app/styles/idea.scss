@@ -15,8 +15,8 @@
         top: 10px;
         right: 10px;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         overflow: hidden;
 
         img {
@@ -26,8 +26,9 @@
 
     &__supporters {
         position: absolute;
-        right: 100px;
-        top: 10px;
+        right: 90px;
+        top: 0;
+        
     }
     
     &__content {
@@ -111,11 +112,12 @@
                 }
 
             }
-        }
-
-        
+        }        
     }
 
-    
-
+    .support-actions {
+        button {
+            margin: 0 5px;
+        }
+    }
 }
