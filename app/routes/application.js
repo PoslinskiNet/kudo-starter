@@ -5,7 +5,6 @@ export default Route.extend({
   session: service(),
 
   beforeModel() {
-    // TODO: uncomment when ready
-    // this.transitionTo(this.get('session.user') ? 'ideas' : 'login');
+    this.transitionTo(this.get('session.currentUser') ? 'ideas' : 'login');
   }
 });
