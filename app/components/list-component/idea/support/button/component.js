@@ -7,8 +7,8 @@ export default Component.extend({
 
   tagName: 'button',
 
-  classNames: ['btn button margin-s'],
-  classNameBindings: ['isActive:active'],
+  classNames: ['button button--muted'],
+  classNameBindings: ['isActive:selected'],
 
   isActive: computed('value', function() {
     return this.get('value') >= this.get('newValue');
